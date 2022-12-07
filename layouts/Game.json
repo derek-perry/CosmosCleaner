@@ -20,15 +20,15 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 420,
-								"acceleration": 1750,
-								"deceleration": 1750,
-								"jump-strength": 420,
-								"gravity": 1750,
-								"max-fall-speed": 1750,
-								"double-jump": true,
-								"jump-sustain": 100,
-								"default-controls": true,
+								"max-speed": 750,
+								"acceleration": 2500,
+								"deceleration": 2500,
+								"jump-strength": 1111,
+								"gravity": 2500,
+								"max-fall-speed": 2500,
+								"double-jump": false,
+								"jump-sustain": 2000,
+								"default-controls": false,
 								"enabled": true
 							}
 						},
