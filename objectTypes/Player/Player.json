@@ -5,11 +5,32 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "JumpCount",
+			"name": "MovementSpeedHorizontal",
 			"type": "number",
-			"desc": "Number of Jumps before hitting the ground.",
-			"show": false,
+			"desc": "Current Horizontal Movement Speed",
+			"show": true,
 			"sid": 884936824625169
+		},
+		{
+			"name": "MovementSpeedVertical",
+			"type": "number",
+			"desc": "Current Vertical Movement Speed",
+			"show": true,
+			"sid": 364038092919498
+		},
+		{
+			"name": "Fuel",
+			"type": "number",
+			"desc": "Amount of Fuel (0-1)",
+			"show": false,
+			"sid": 694513868382141
+		},
+		{
+			"name": "FuelFlow",
+			"type": "number",
+			"desc": "Amount of Fuel used per usage.",
+			"show": true,
+			"sid": 807214482154855
 		},
 		{
 			"name": "Idle",
@@ -21,9 +42,9 @@
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 202764048848310
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 941738785972506
 		},
 		{
 			"behaviorId": "scrollto",
@@ -51,6 +72,28 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 2352322,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Top",
+								"x": 0.5,
+								"y": 0
+							},
+							{
+								"name": "Right",
+								"x": 1,
+								"y": 0.5
+							},
+							{
+								"name": "Bottom",
+								"x": 0.5,
+								"y": 1
+							},
+							{
+								"name": "Left",
+								"x": 0,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -72,8 +115,30 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3219901,
+						"imageSpriteId": 4971526,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Bottom",
+								"x": 0.5,
+								"y": 1
+							},
+							{
+								"name": "Top",
+								"x": 0.5,
+								"y": 0
+							},
+							{
+								"name": "Right",
+								"x": 1,
+								"y": 0.5
+							},
+							{
+								"name": "Left",
+								"x": 0,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -95,59 +160,35 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9008774,
+						"imageSpriteId": 1083213,
 						"useCollisionPoly": true,
-						"duration": 1
-					}
-				],
-				"sid": 907305776314826,
-				"name": "JumpIdle",
-				"isLooping": true,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
-			},
-			{
-				"frames": [
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 8686905,
-						"useCollisionPoly": true,
-						"duration": 1
-					}
-				],
-				"sid": 638132536669458,
-				"name": "JumpIdleDouble",
-				"isLooping": true,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
-			},
-			{
-				"frames": [
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 1513610,
-						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Bottom",
+								"x": 0.5,
+								"y": 1
+							},
+							{
+								"name": "Top",
+								"x": 0.5,
+								"y": 0
+							},
+							{
+								"name": "Right",
+								"x": 1,
+								"y": 0.5
+							},
+							{
+								"name": "Left",
+								"x": 0,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
 				"sid": 771230282241581,
-				"name": "Jump",
+				"name": "Fly",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -164,13 +205,35 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2995899,
+						"imageSpriteId": 6860941,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Bottom",
+								"x": 0.5,
+								"y": 1
+							},
+							{
+								"name": "Top",
+								"x": 0.5,
+								"y": 0
+							},
+							{
+								"name": "Right",
+								"x": 1,
+								"y": 0.5
+							},
+							{
+								"name": "Left",
+								"x": 0,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
-				"sid": 729506145426211,
-				"name": "JumpDouble",
+				"sid": 156964023352465,
+				"name": "Fall",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,

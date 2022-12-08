@@ -1,0 +1,31 @@
+{
+	"name": "GroundPlatform",
+	"plugin-id": "TiledBg",
+	"sid": 205270647802061,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 425110181873914
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 975229443311747
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1471148,
+		"useCollisionPoly": true
+	}
+}

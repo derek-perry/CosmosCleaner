@@ -1,26 +1,21 @@
 {
 	"name": "Ground",
-	"plugin-id": "TiledBg",
-	"sid": 205270647802061,
+	"plugin-id": "Tilemap",
+	"sid": 586329008235515,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 975229443311747
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 250,
-		"height": 250,
+		"width": 352,
+		"height": 224,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 1471148,
+		"imageSpriteId": 9217027,
 		"useCollisionPoly": true
-	}
+	},
+	"tile-collision-polys": {}
 }

@@ -1,0 +1,37 @@
+{
+	"name": "AreaSky",
+	"plugin-id": "Sprite",
+	"sid": 409031082236246,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4741486,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 866714453827180,
+				"name": "AreaSky",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

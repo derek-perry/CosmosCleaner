@@ -4,8 +4,115 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Gravity",
+			"description": "Physics/Player Movement Gravity",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 497119442172249
+						}
+					],
+					"actions": [
+						{
+							"id": "set-world-gravity",
+							"objectClass": "Player",
+							"sid": 992857087098067,
+							"behaviorType": "Physics",
+							"parameters": {
+								"gravity": "10"
+							}
+						}
+					],
+					"sid": 776967146700928
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 888116299191149,
+							"parameters": {
+								"object": "AreaGround"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-world-gravity",
+							"objectClass": "Player",
+							"sid": 469988380088977,
+							"behaviorType": "Physics",
+							"parameters": {
+								"gravity": "25"
+							}
+						}
+					],
+					"sid": 124444426696081
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 875560452941980,
+							"parameters": {
+								"object": "AreaSky"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-world-gravity",
+							"objectClass": "Player",
+							"sid": 312602111672827,
+							"behaviorType": "Physics",
+							"parameters": {
+								"gravity": "10"
+							}
+						}
+					],
+					"sid": 173958282087730
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 222189740120498,
+							"parameters": {
+								"object": "AreaSpace"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-world-gravity",
+							"objectClass": "Player",
+							"sid": 763434035874988,
+							"behaviorType": "Physics",
+							"parameters": {
+								"gravity": "0"
+							}
+						}
+					],
+					"sid": 108705402537235
+				}
+			],
+			"sid": 221215193050480
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Movement",
-			"description": "Functions and Animations Management for Player Movement",
+			"description": "Physics and Animations Management for Player Movement",
 			"isActiveOnStart": true,
 			"children": [
 				{
@@ -16,8 +123,8 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
-							"functionName": "MoveLeft",
-							"functionDescription": "Player Movement to the Left",
+							"functionName": "IdleStart",
+							"functionDescription": "Player's Idle State - Start",
 							"functionCategory": "",
 							"functionReturnType": "none",
 							"functionCopyPicked": false,
@@ -27,214 +134,16 @@
 							"conditions": [],
 							"actions": [
 								{
-									"id": "simulate-control",
+									"id": "set-boolean-instvar",
 									"objectClass": "Player",
-									"sid": 842812542873953,
-									"behaviorType": "Platform",
+									"sid": 417411699335436,
 									"parameters": {
-										"control": "left"
-									}
-								},
-								{
-									"id": "set-mirrored",
-									"objectClass": "Player",
-									"sid": 968564764614916,
-									"parameters": {
-										"state": "mirrored"
-									}
-								},
-								{
-									"callFunction": "IdleStop",
-									"sid": 324163048185655
-								}
-							],
-							"sid": 947736371818030
-						},
-						{
-							"functionName": "MoveRight",
-							"functionDescription": "Player Movement to the Right",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionCopyPicked": false,
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "simulate-control",
-									"objectClass": "Player",
-									"sid": 658982649429197,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "right"
-									}
-								},
-								{
-									"id": "set-mirrored",
-									"objectClass": "Player",
-									"sid": 839887401978343,
-									"parameters": {
-										"state": "not-mirrored"
-									}
-								},
-								{
-									"callFunction": "IdleStop",
-									"sid": 370556749998484
-								}
-							],
-							"sid": 200197993747959
-						},
-						{
-							"functionName": "RunStop",
-							"functionDescription": "Player Movement Boost - Stop",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionCopyPicked": false,
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-max-speed",
-									"objectClass": "Player",
-									"sid": 288987118537967,
-									"behaviorType": "Platform",
-									"parameters": {
-										"max-speed": "800"
-									}
-								},
-								{
-									"id": "set-acceleration",
-									"objectClass": "Player",
-									"sid": 818150160099380,
-									"behaviorType": "Platform",
-									"parameters": {
-										"acceleration": "3000"
-									}
-								},
-								{
-									"id": "set-deceleration",
-									"objectClass": "Player",
-									"sid": 194488580730613,
-									"behaviorType": "Platform",
-									"parameters": {
-										"deceleration": "3000"
+										"instance-variable": "Idle",
+										"value": "true"
 									}
 								}
 							],
-							"sid": 163203244684473
-						},
-						{
-							"functionName": "RunStart",
-							"functionDescription": "Player Movement Boost - Start",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionCopyPicked": false,
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-max-speed",
-									"objectClass": "Player",
-									"sid": 534195877234423,
-									"behaviorType": "Platform",
-									"parameters": {
-										"max-speed": "1100"
-									}
-								},
-								{
-									"id": "set-acceleration",
-									"objectClass": "Player",
-									"sid": 438942145768477,
-									"behaviorType": "Platform",
-									"parameters": {
-										"acceleration": "5000"
-									}
-								},
-								{
-									"id": "set-deceleration",
-									"objectClass": "Player",
-									"sid": 428202622578961,
-									"behaviorType": "Platform",
-									"parameters": {
-										"deceleration": "5000"
-									}
-								}
-							],
-							"sid": 774044700376595
-						},
-						{
-							"functionName": "Jump",
-							"functionDescription": "Player's First Jump",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionCopyPicked": false,
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "simulate-control",
-									"objectClass": "Player",
-									"sid": 905949385201141,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "jump"
-									}
-								}
-							],
-							"sid": 486773250569310
-						},
-						{
-							"functionName": "DoubleJump",
-							"functionDescription": "Player's Second Jump",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionCopyPicked": false,
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "add-to-instvar",
-									"objectClass": "Player",
-									"sid": 354087119886515,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 763863413472965
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-landed",
-									"objectClass": "Player",
-									"sid": 140739450922840,
-									"behaviorType": "Platform"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Player",
-									"sid": 436694757557621,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"value": "0"
-									}
-								}
-							],
-							"sid": 660488785119817
+							"sid": 637144555398451
 						},
 						{
 							"functionName": "IdleStop",
@@ -250,18 +159,18 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Player",
-									"sid": 225326137069466,
+									"sid": 591081193536104,
 									"parameters": {
 										"instance-variable": "Idle",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 584816426042875
+							"sid": 949787140122744
 						},
 						{
-							"functionName": "IdleStart",
-							"functionDescription": "Player's Idle State - Start",
+							"functionName": "BoostStart",
+							"functionDescription": "Player Movement Boost - Start",
 							"functionCategory": "",
 							"functionReturnType": "none",
 							"functionCopyPicked": false,
@@ -271,504 +180,485 @@
 							"conditions": [],
 							"actions": [
 								{
-									"id": "set-boolean-instvar",
+									"id": "set-instvar-value",
 									"objectClass": "Player",
-									"sid": 377724251374837,
+									"sid": 205060853526756,
 									"parameters": {
-										"instance-variable": "Idle",
-										"value": "true"
+										"instance-variable": "MovementSpeedHorizontal",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 995375778770188,
+									"parameters": {
+										"instance-variable": "MovementSpeedVertical",
+										"value": "4"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 380987674873282,
+									"parameters": {
+										"instance-variable": "FuelFlow",
+										"value": "0.0003"
 									}
 								}
 							],
-							"sid": 586559800704901
+							"sid": 661345983801447
+						},
+						{
+							"functionName": "BoostStop",
+							"functionDescription": "Player Movement Boost - Stop",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 750019957730066,
+									"parameters": {
+										"instance-variable": "MovementSpeedHorizontal",
+										"value": "1.75"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 263605568687301,
+									"parameters": {
+										"instance-variable": "MovementSpeedVertical",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 854220706017307,
+									"parameters": {
+										"instance-variable": "FuelFlow",
+										"value": "0.000175"
+									}
+								}
+							],
+							"sid": 736957898393689
+						},
+						{
+							"functionName": "MoveUpStart",
+							"functionDescription": "Player Movement Up - Start",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 946041539184970,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"comparison": 4,
+										"value": "Player.FuelFlow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-impulse",
+									"objectClass": "Player",
+									"sid": 434860493559402,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse-x": "0",
+										"implulse-y": "-Player.MovementSpeedVertical",
+										"image-point": "3"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 133528295006880,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"value": "Player.FuelFlow"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Fuel",
+									"sid": 530312533583114,
+									"parameters": {
+										"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 731907846069696,
+									"parameters": {
+										"animation": "\"Fly\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 180821940919089
+						},
+						{
+							"functionName": "MoveUpStop",
+							"functionDescription": "Player Movement Up - Stop",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "IdleStart",
+									"sid": 821690037432865
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 484832456362645,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 724524465869877
+						},
+						{
+							"functionName": "MoveDownStart",
+							"functionDescription": "Player Movement Down - Start",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 903273330462577,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"comparison": 4,
+										"value": "Player.FuelFlow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-impulse",
+									"objectClass": "Player",
+									"sid": 239387627554121,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse-x": "0",
+										"implulse-y": "Player.MovementSpeedVertical",
+										"image-point": "1"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 850373800015696,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"value": "Player.FuelFlow"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Fuel",
+									"sid": 205953298914923,
+									"parameters": {
+										"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 842848058989834,
+									"parameters": {
+										"animation": "\"Fall\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 711475132707640
+						},
+						{
+							"functionName": "MoveDownStop",
+							"functionDescription": "Player Movement Down - Stop",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "IdleStart",
+									"sid": 213242193290687
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 775357214766541,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 147357813746896
+						},
+						{
+							"functionName": "MoveLeftStart",
+							"functionDescription": "Player Movement to the Left - Start",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 526805972824167,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"comparison": 4,
+										"value": "Player.FuelFlow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-impulse",
+									"objectClass": "Player",
+									"sid": 446629845973038,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse-x": "-Player.MovementSpeedHorizontal",
+										"implulse-y": "0",
+										"image-point": "2"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 896270638902536,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"value": "Player.FuelFlow"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Fuel",
+									"sid": 374947494838986,
+									"parameters": {
+										"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 718782386707478,
+									"parameters": {
+										"animation": "\"Moving\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 406796991614571,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"callFunction": "IdleStop",
+									"sid": 138439595179586
+								}
+							],
+							"sid": 907008196591013
+						},
+						{
+							"functionName": "MoveLeftStop",
+							"functionDescription": "Player Movement to the Left - Stop",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 341349413644402,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"callFunction": "IdleStart",
+									"sid": 820891400247289
+								}
+							],
+							"sid": 400691055946496
+						},
+						{
+							"functionName": "MoveRightStart",
+							"functionDescription": "Player Movement to the Right - Start",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 577674074609129,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"comparison": 4,
+										"value": "Player.FuelFlow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-impulse",
+									"objectClass": "Player",
+									"sid": 822391026322680,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse-x": "Player.MovementSpeedHorizontal",
+										"implulse-y": "0",
+										"image-point": "4"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 113440804438091,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"value": "Player.FuelFlow"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Fuel",
+									"sid": 819939577680160,
+									"parameters": {
+										"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 257209016924413,
+									"parameters": {
+										"animation": "\"Moving\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 672486225716630,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"callFunction": "IdleStop",
+									"sid": 170524955490109
+								}
+							],
+							"sid": 254531213145284
+						},
+						{
+							"functionName": "MoveRightStop",
+							"functionDescription": "Player Movement to the Right - Stop",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 396956939775701,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"callFunction": "IdleStart",
+									"sid": 503016844646021
+								}
+							],
+							"sid": 456654952470624
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-sleeping",
+									"objectClass": "Player",
+									"sid": 807556864678015,
+									"behaviorType": "Physics"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 212199600711141,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"callFunction": "IdleStart",
+									"sid": 251642057534298
+								}
+							],
+							"sid": 522059339761169
 						}
 					],
 					"sid": 660716472338931
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Movement Animations",
-					"description": "Animation States for Player Movement",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-jumping",
-									"objectClass": "Player",
-									"sid": 967216177226030,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Player",
-									"sid": 390621638098911,
-									"parameters": {
-										"instance-variable": "Idle"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 740969333105339,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 132407116816813,
-									"parameters": {
-										"animation": "\"Jump\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 812274323361626
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-jumping",
-									"objectClass": "Player",
-									"sid": 878491630107159,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Player",
-									"sid": 734850814141634,
-									"parameters": {
-										"instance-variable": "Idle"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 510650339666924,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 428210470962216,
-									"parameters": {
-										"animation": "\"JumpIdle\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 944568751175597
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-jumping",
-									"objectClass": "Player",
-									"sid": 926432863558017,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Player",
-									"sid": 972716579887150,
-									"parameters": {
-										"instance-variable": "Idle"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 864348289403710,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 386568297033928,
-									"parameters": {
-										"animation": "\"JumpDouble\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 744998858865784
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-jumping",
-									"objectClass": "Player",
-									"sid": 479126780452866,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Player",
-									"sid": 948270527855211,
-									"parameters": {
-										"instance-variable": "Idle"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 227429780376371,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 191249354050661,
-									"parameters": {
-										"animation": "\"JumpIdleDouble\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 503302797832833
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-moved",
-									"objectClass": "Player",
-									"sid": 555781241668898,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "Player",
-									"sid": 297213695864224,
-									"behaviorType": "Platform"
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStop",
-									"sid": 167136542530915
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 101169408325929,
-									"parameters": {
-										"animation": "\"Moving\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 847025791672270
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-moved",
-									"objectClass": "Player",
-									"sid": 788441027719973,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "Player",
-									"sid": 168739824309754,
-									"behaviorType": "Platform",
-									"isInverted": true
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 644468426592161,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStop",
-									"sid": 300554106257396
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 860253295332269,
-									"parameters": {
-										"animation": "\"Jump\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 614755817386568
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-moved",
-									"objectClass": "Player",
-									"sid": 299348297762142,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "Player",
-									"sid": 365640967669495,
-									"behaviorType": "Platform",
-									"isInverted": true
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 416297437217008,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStop",
-									"sid": 556190101457274
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 118935478255212,
-									"parameters": {
-										"animation": "\"JumpDouble\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 378375920922289
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-stopped",
-									"objectClass": "Player",
-									"sid": 347072857738765,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "Player",
-									"sid": 727662807443276,
-									"behaviorType": "Platform"
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStart",
-									"sid": 379662630933097
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 552003852679754,
-									"parameters": {
-										"animation": "\"Idle\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 159428181350577
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-stopped",
-									"objectClass": "Player",
-									"sid": 158584273100888,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "Player",
-									"sid": 759748560170922,
-									"behaviorType": "Platform",
-									"isInverted": true
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 857679365379006,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStart",
-									"sid": 779960850913556
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 204722105553432,
-									"parameters": {
-										"animation": "\"JumpIdle\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 502168695280116
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-stopped",
-									"objectClass": "Player",
-									"sid": 211549371585574,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "Player",
-									"sid": 644775237914874,
-									"behaviorType": "Platform",
-									"isInverted": true
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 704483579166476,
-									"parameters": {
-										"instance-variable": "JumpCount",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStart",
-									"sid": 289000377017130
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 336017719246883,
-									"parameters": {
-										"animation": "\"JumpDoubleIdle\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 817887184844316
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-landed",
-									"objectClass": "Player",
-									"sid": 581104714735877,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-moving",
-									"objectClass": "Player",
-									"sid": 233922018408586,
-									"behaviorType": "Platform"
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStop",
-									"sid": 152122109589053
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 133384097893738,
-									"parameters": {
-										"animation": "\"Moving\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 384291940760712
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-landed",
-									"objectClass": "Player",
-									"sid": 844839972134712,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "is-moving",
-									"objectClass": "Player",
-									"sid": 633111622528409,
-									"behaviorType": "Platform",
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "IdleStart",
-									"sid": 650290508518691
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 768386342825509,
-									"parameters": {
-										"animation": "\"Idle\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 812944435913094
-						}
-					],
-					"sid": 648875386989427
 				}
 			],
 			"sid": 421648823283585
@@ -791,6 +681,178 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 697935755903055,
+									"parameters": {
+										"key": 16
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "BoostStart",
+									"sid": 256617039145459
+								}
+							],
+							"sid": 623946362187974
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 249896102853182,
+									"parameters": {
+										"key": 16
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "BoostStop",
+									"sid": 259914693042379
+								}
+							],
+							"sid": 640943992367352
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 778327992663103,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 607976469117511,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 829998885348874,
+									"parameters": {
+										"key": 38
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "MoveUpStart",
+									"sid": 858384961428195
+								}
+							],
+							"sid": 690010794650370,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 124504180836092,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 468501141178147,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 384635667468164,
+									"parameters": {
+										"key": 38
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "MoveUpStop",
+									"sid": 188853533043078
+								}
+							],
+							"sid": 781371192260521,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 903623352026001,
+									"parameters": {
+										"key": 83
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 718053512933234,
+									"parameters": {
+										"key": 40
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "MoveDownStart",
+									"sid": 800891486470703
+								}
+							],
+							"sid": 152056596219535,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 731723077504571,
+									"parameters": {
+										"key": 83
+									}
+								},
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 836197957192911,
+									"parameters": {
+										"key": 40
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "MoveDownStop",
+									"sid": 424730092154647
+								}
+							],
+							"sid": 133555529700535,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "key-is-down",
 									"objectClass": "Keyboard",
 									"sid": 266478077678880,
@@ -809,11 +871,40 @@
 							],
 							"actions": [
 								{
-									"callFunction": "MoveLeft",
+									"callFunction": "MoveLeftStart",
 									"sid": 566460483507499
 								}
 							],
 							"sid": 861151174898019,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 425208489600478,
+									"parameters": {
+										"key": 65
+									}
+								},
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 140281036580687,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "MoveLeftStop",
+									"sid": 721749492163985
+								}
+							],
+							"sid": 957222497417647,
 							"isOrBlock": true
 						},
 						{
@@ -838,7 +929,7 @@
 							],
 							"actions": [
 								{
-									"callFunction": "MoveRight",
+									"callFunction": "MoveRightStart",
 									"sid": 913259877648525
 								}
 							],
@@ -849,106 +940,30 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 874550979779014,
-									"parameters": {
-										"key": 16
-									}
-								},
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 102660840143504,
-									"parameters": {
-										"key": 17
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "RunStart",
-									"sid": 842207884831750
-								}
-							],
-							"sid": 979919151803361,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "on-key-released",
 									"objectClass": "Keyboard",
-									"sid": 668742002008722,
+									"sid": 821528282524048,
 									"parameters": {
-										"key": 16
+										"key": 68
 									}
 								},
 								{
 									"id": "on-key-released",
 									"objectClass": "Keyboard",
-									"sid": 427506323887753,
+									"sid": 440901278016907,
 									"parameters": {
-										"key": 17
+										"key": 39
 									}
 								}
 							],
 							"actions": [
 								{
-									"callFunction": "RunStop",
-									"sid": 737684214248636
+									"callFunction": "MoveRightStop",
+									"sid": 253655406576103
 								}
 							],
-							"sid": 335016312241038,
+							"sid": 201813146621570,
 							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 805205980538122,
-									"parameters": {
-										"key": 32
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "Jump",
-									"sid": 400227632481159
-								}
-							],
-							"sid": 717409521516310
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 438135730758929,
-									"parameters": {
-										"key": 32
-									}
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "Player",
-									"sid": 381679992742682,
-									"behaviorType": "Platform",
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "DoubleJump",
-									"sid": 152493945049211
-								}
-							],
-							"sid": 982597875017154
 						}
 					],
 					"sid": 447174570150178
