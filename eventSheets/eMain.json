@@ -36,31 +36,6 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Player",
-							"sid": 888116299191149,
-							"parameters": {
-								"object": "AreaGround"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-world-gravity",
-							"objectClass": "Player",
-							"sid": 469988380088977,
-							"behaviorType": "Physics",
-							"parameters": {
-								"gravity": "25"
-							}
-						}
-					],
-					"sid": 124444426696081
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Player",
 							"sid": 875560452941980,
 							"parameters": {
 								"object": "AreaSky"
@@ -670,6 +645,127 @@
 			"description": "Input Detection for Keyboard, Mouse, Touch, and Gamepad",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Debug Input",
+					"description": "Input Management for Debug/Testing",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 334358880736379,
+									"parameters": {
+										"key": 96
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Player",
+									"sid": 208497919649187,
+									"parameters": {
+										"x": "3840",
+										"y": "49800"
+									}
+								}
+							],
+							"sid": 716862571383098
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 558390942010618,
+									"parameters": {
+										"key": 107
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 477471568262785,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"comparison": 3,
+										"value": "0.99"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 774019813473570,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"value": "0.002"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Fuel",
+									"sid": 646455358031223,
+									"parameters": {
+										"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+									}
+								}
+							],
+							"sid": 341319036148973
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 650467176364168,
+									"parameters": {
+										"key": 107
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 380067542921749,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"comparison": 4,
+										"value": "0.99"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 363408042210182,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Fuel",
+									"sid": 207686909522152,
+									"parameters": {
+										"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+									}
+								}
+							],
+							"sid": 849746147522806
+						}
+					],
+					"sid": 135853112566824
+				},
 				{
 					"eventType": "group",
 					"disabled": false,

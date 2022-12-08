@@ -56,14 +56,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
@@ -127,15 +119,13 @@
 			},
 			{
 				"items": [
-					"GroundPlatform",
+					"PlatformGround",
 					"WallInvisibleRight",
 					"WallInvisibleLeft",
 					"WallInvisibleTop",
 					"WallInvisibleBottom",
 					"AreaSky",
-					"AreaSpace",
-					"AreaGround",
-					"Ground"
+					"AreaSpace"
 				],
 				"subfolders": [],
 				"name": "Level"
