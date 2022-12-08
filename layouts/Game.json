@@ -17,7 +17,8 @@
 					},
 					"uid": 7,
 					"instanceVariables": {
-						"JumpCount": 0
+						"JumpCount": 0,
+						"Idle": true
 					},
 					"behaviors": {
 						"Platform": {
