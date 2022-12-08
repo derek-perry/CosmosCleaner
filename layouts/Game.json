@@ -16,18 +16,20 @@
 						"live-preview": false
 					},
 					"uid": 7,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"JumpCount": 0
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 750,
-								"acceleration": 2500,
-								"deceleration": 2500,
-								"jump-strength": 1111,
+								"max-speed": 800,
+								"acceleration": 3000,
+								"deceleration": 3000,
+								"jump-strength": 1100,
 								"gravity": 2500,
 								"max-fall-speed": 2500,
-								"double-jump": false,
-								"jump-sustain": 2000,
+								"double-jump": true,
+								"jump-sustain": 1100,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -44,9 +46,9 @@
 						}
 					},
 					"world": {
-						"x": 1920,
-						"y": 9795,
-						"width": 100,
+						"x": 3840,
+						"y": 33233,
+						"width": 200,
 						"height": 200,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -119,8 +121,8 @@
 					},
 					"world": {
 						"x": 0,
-						"y": 9900,
-						"width": 3840,
+						"y": 33333,
+						"width": 7680,
 						"height": 100,
 						"originX": 0,
 						"originY": 0,
@@ -233,8 +235,8 @@
 	"sid": 562421436177207,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 3840,
-	"height": 10000,
+	"width": 7680,
+	"height": 50000,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,

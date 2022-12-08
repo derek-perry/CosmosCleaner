@@ -4,6 +4,205 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Movement",
+			"description": "Player movement-related events",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Player",
+							"sid": 618627598232569,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 343893858634193,
+							"parameters": {
+								"animation": "\"Moving\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 109796793460417
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Player",
+							"sid": 454998143523594,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 643383324340943,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 272200080603079
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "Player",
+							"sid": 298101505866814,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 906206099093405,
+							"parameters": {
+								"instance-variable": "JumpCount",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 642185543839883,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 767183536254185
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "Player",
+							"sid": 382312386224400,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 238503434343966,
+							"parameters": {
+								"instance-variable": "JumpCount",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 568414314627361,
+							"parameters": {
+								"animation": "\"JumpDouble\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 908817443134669
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Player",
+							"sid": 705354358501322,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "Player",
+							"sid": 704537625861325,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 951139348276651,
+							"parameters": {
+								"instance-variable": "JumpCount",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 828318349233468,
+							"parameters": {
+								"animation": "\"Moving\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 875281993587429
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Player",
+							"sid": 704707651880168,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "Player",
+							"sid": 366385898390687,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 318854741304495,
+							"parameters": {
+								"instance-variable": "JumpCount",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 416638644555798,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 293400608478779
+				}
+			],
+			"sid": 421648823283585
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Input",
 			"description": "Input Detection",
 			"isActiveOnStart": true,
@@ -41,6 +240,14 @@
 							"parameters": {
 								"control": "left"
 							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 518085316501316,
+							"parameters": {
+								"state": "mirrored"
+							}
 						}
 					],
 					"sid": 497652244537827,
@@ -75,6 +282,14 @@
 							"parameters": {
 								"control": "right"
 							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 409624897100440,
+							"parameters": {
+								"state": "not-mirrored"
+							}
 						}
 					],
 					"sid": 727136833915600,
@@ -84,18 +299,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
+							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 198711397631230,
+							"sid": 339145047305163,
 							"parameters": {
 								"key": 32
 							}
-						},
-						{
-							"id": "is-on-floor",
-							"objectClass": "Player",
-							"sid": 265390789506416,
-							"behaviorType": "Platform"
 						}
 					],
 					"actions": [
@@ -115,32 +324,33 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-released",
+							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 527793481186357,
+							"sid": 811989745555638,
 							"parameters": {
 								"key": 32
 							}
 						},
 						{
-							"id": "is-jumping",
+							"id": "is-on-floor",
 							"objectClass": "Player",
-							"sid": 995389915629523,
-							"behaviorType": "Platform"
+							"sid": 232752233047466,
+							"behaviorType": "Platform",
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "set-vector-y",
+							"id": "add-to-instvar",
 							"objectClass": "Player",
-							"sid": 660033692284810,
-							"behaviorType": "Platform",
+							"sid": 950108174232712,
 							"parameters": {
-								"vector-y": "-10"
+								"instance-variable": "JumpCount",
+								"value": "1"
 							}
 						}
 					],
-					"sid": 408664960801869
+					"sid": 866852290979825
 				}
 			],
 			"sid": 367005414313472
