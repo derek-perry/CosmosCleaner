@@ -1,10 +1,16 @@
 {
-	"name": "AreaSky",
+	"name": "MinableSatellite",
 	"plugin-id": "Sprite",
-	"sid": 409031082236246,
+	"sid": 209021456587406,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 558896015192861
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -18,13 +24,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4271999,
+						"imageSpriteId": 1573401,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 866714453827180,
-				"name": "AreaSky",
+				"sid": 476059685513211,
+				"name": "Idle",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

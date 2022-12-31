@@ -120,30 +120,49 @@
 			{
 				"items": [
 					"PlatformGround",
-					"WallInvisibleRight",
-					"WallInvisibleLeft",
-					"WallInvisibleTop",
-					"WallInvisibleBottom",
 					"AreaSky",
 					"AreaSpace"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"WallInvisibleBottom",
+							"WallInvisibleLeft",
+							"WallInvisibleRight",
+							"WallInvisibleTop"
+						],
+						"subfolders": [],
+						"name": "WallInvisible"
+					}
+				],
 				"name": "Level"
 			},
 			{
 				"items": [
 					"Player",
-					"Text_Fuel"
+					"Text_Fuel",
+					"Text_Notification",
+					"Text_Money"
 				],
 				"subfolders": [],
 				"name": "Player"
+			},
+			{
+				"items": [
+					"MinableSatellite",
+					"MinableMeteor"
+				],
+				"subfolders": [],
+				"name": "Minables"
 			}
 		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Minable"
+		],
 		"subfolders": []
 	},
 	"layouts": {

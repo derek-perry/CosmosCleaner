@@ -2,6 +2,16 @@
 	"name": "eMain",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Money",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Amount of money the player currently has",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 308655216920045
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Gravity",
@@ -82,6 +92,212 @@
 				}
 			],
 			"sid": 221215193050480
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Notification",
+			"description": "Spawning and Deleting the In-Game Notification Text",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 784067498136775
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Notification",
+							"sid": 196165953426176,
+							"parameters": {
+								"text": "\"Howdy\" & newline & \"WASD to move\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 953070251983017,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Notification",
+							"sid": 975786456675515,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 343734927457002
+				}
+			],
+			"sid": 683649590485013
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Money",
+			"description": "Money Management and Text Display",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 525660066576328
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Money",
+							"sid": 975907364151438,
+							"parameters": {
+								"text": "\"Money: \" & Money"
+							}
+						}
+					],
+					"sid": 160035910562046
+				}
+			],
+			"sid": 912154785554961
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fuel",
+			"description": "Management of Fuel Level and Text Display",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 743807172344987
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Fuel",
+							"sid": 381082767366366,
+							"parameters": {
+								"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+							}
+						}
+					],
+					"sid": 259680797997044
+				}
+			],
+			"sid": 794920324475650
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mining",
+			"description": "Player Mining of Minable Stuff",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "MinableMeteor",
+							"sid": 325368415274510,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 903475091158027,
+							"parameters": {
+								"variable": "Money",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Money",
+							"sid": 717897432143503,
+							"parameters": {
+								"text": "\"Money: \" & Money"
+							}
+						}
+					],
+					"sid": 186652983948693
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "MinableSatellite",
+							"sid": 650380761802027,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 997415973586500,
+							"parameters": {
+								"variable": "Money",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Money",
+							"sid": 819189899324977,
+							"parameters": {
+								"text": "\"Money: \" & Money"
+							}
+						}
+					],
+					"sid": 939380944099776
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Minable",
+							"sid": 296156312529123,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Minable",
+							"sid": 152371110364291
+						}
+					],
+					"sid": 717087238039007
+				}
+			],
+			"sid": 946393373337677
 		},
 		{
 			"eventType": "group",
@@ -777,9 +993,57 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-mouse-wheel",
+									"objectClass": "Mouse",
+									"sid": 933856583140332,
+									"parameters": {
+										"direction": "up"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layout-scale",
+									"objectClass": "System",
+									"sid": 312657359660623,
+									"parameters": {
+										"scale": "LayoutScale+0.001"
+									}
+								}
+							],
+							"sid": 623946362187974
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-mouse-wheel",
+									"objectClass": "Mouse",
+									"sid": 980449667647972,
+									"parameters": {
+										"direction": "down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layout-scale",
+									"objectClass": "System",
+									"sid": 133844228760486,
+									"parameters": {
+										"scale": "LayoutScale-0.001"
+									}
+								}
+							],
+							"sid": 373972694290486
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 697935755903055,
+									"sid": 140699526620337,
 									"parameters": {
 										"key": 16
 									}
@@ -788,10 +1052,10 @@
 							"actions": [
 								{
 									"callFunction": "BoostStart",
-									"sid": 256617039145459
+									"sid": 969332162762497
 								}
 							],
-							"sid": 623946362187974
+							"sid": 693487810611769
 						},
 						{
 							"eventType": "block",

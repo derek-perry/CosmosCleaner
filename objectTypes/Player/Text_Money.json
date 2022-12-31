@@ -1,0 +1,15 @@
+{
+	"name": "Text_Money",
+	"plugin-id": "Text",
+	"sid": 317000257344936,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 154688038858924
+		}
+	],
+	"effectTypes": []
+}
