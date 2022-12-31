@@ -131,20 +131,10 @@
 				"items": [
 					"PlatformGround",
 					"AreaSky",
-					"AreaSpace"
+					"AreaSpace",
+					"WallInvisible"
 				],
-				"subfolders": [
-					{
-						"items": [
-							"WallInvisibleBottom",
-							"WallInvisibleLeft",
-							"WallInvisibleRight",
-							"WallInvisibleTop"
-						],
-						"subfolders": [],
-						"name": "WallInvisible"
-					}
-				],
+				"subfolders": [],
 				"name": "Level"
 			},
 			{

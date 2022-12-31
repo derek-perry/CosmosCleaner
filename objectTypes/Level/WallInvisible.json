@@ -1,19 +1,19 @@
 {
-	"name": "WallInvisibleLeft",
+	"name": "WallInvisible",
 	"plugin-id": "TiledBg",
-	"sid": 622210910714756,
+	"sid": 452576610120169,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Physics",
 			"name": "Physics",
-			"sid": 189058198797305
+			"sid": 641465137220120
 		},
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 455548823456262
+			"sid": 315687856078026
 		}
 	],
 	"effectTypes": [],
@@ -25,7 +25,7 @@
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 9149532,
+		"imageSpriteId": 8873785,
 		"useCollisionPoly": true
 	}
 }

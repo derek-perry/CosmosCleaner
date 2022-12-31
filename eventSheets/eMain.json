@@ -31,7 +31,7 @@
 						{
 							"id": "set-world-gravity",
 							"objectClass": "Player",
-							"sid": 992857087098067,
+							"sid": 902693521366455,
 							"behaviorType": "Physics",
 							"parameters": {
 								"gravity": "10"

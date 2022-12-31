@@ -7,115 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "WallInvisibleRight",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 8,
-					"instanceVariables": {},
-					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": true,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.75,
-								"elasticity": 0.1,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Floor"
-							}
-						}
-					},
-					"world": {
-						"x": 7679,
-						"y": 0,
-						"width": 2,
-						"height": 50000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "WallInvisibleLeft",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 10,
-					"instanceVariables": {},
-					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": true,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.75,
-								"elasticity": 0.1,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Floor"
-							}
-						}
-					},
-					"world": {
-						"x": -1,
-						"y": 0,
-						"width": 2,
-						"height": 50000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "WallInvisibleTop",
+					"type": "WallInvisible",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -162,61 +54,7 @@
 							1,
 							1,
 							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "WallInvisibleBottom",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 12,
-					"instanceVariables": {},
-					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": true,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.75,
-								"elasticity": 0.1,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Floor"
-							}
-						}
-					},
-					"world": {
-						"x": 0,
-						"y": 48561,
-						"width": 7680,
-						"height": 1439,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							0
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -235,10 +73,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3840,
-						"y": 44237,
-						"width": 7680,
-						"height": 8474,
+						"x": 7500,
+						"y": 95243,
+						"width": 15000,
+						"height": 7934,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -264,10 +102,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3840,
-						"y": 20000,
-						"width": 7680,
-						"height": 40000,
+						"x": 7500,
+						"y": 45638,
+						"width": 15000,
+						"height": 91276,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -324,7 +162,7 @@
 						"image-offset-x": 0,
 						"image-offset-y": 0,
 						"image-scale-x": 1,
-						"image-scale-y": 1.8899999999999906,
+						"image-scale-y": 1,
 						"image-angle": 0
 					},
 					"uid": 6,
@@ -353,9 +191,9 @@
 					},
 					"world": {
 						"x": 0,
-						"y": 48100,
-						"width": 7680,
-						"height": 461,
+						"y": 99210,
+						"width": 15000,
+						"height": 250,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -366,6 +204,330 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlatformGround",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 26,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": true,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.1,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Ground"
+							}
+						}
+					},
+					"world": {
+						"x": 15000,
+						"y": 99710,
+						"width": 15000,
+						"height": 250,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.141592653589793,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "WallInvisible",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 8,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": true,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.1,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Floor"
+							}
+						}
+					},
+					"world": {
+						"x": 960,
+						"y": 0,
+						"width": 13079.8,
+						"height": 540,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 50
+					}
+				},
+				{
+					"type": "WallInvisible",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 9,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": true,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.1,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Floor"
+							}
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 999999.9,
+						"width": 7680,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 50
+					}
+				},
+				{
+					"type": "WallInvisible",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 10,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": true,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.1,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Floor"
+							}
+						}
+					},
+					"world": {
+						"x": 14040,
+						"y": 5.96994176189137e-16,
+						"width": 960.1,
+						"height": 100000,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 50
+					}
+				},
+				{
+					"type": "WallInvisible",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": true,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.1,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Floor"
+							}
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 960.1,
+						"height": 100000,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 50
+					}
+				},
+				{
+					"type": "WallInvisible",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 25,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": true,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.75,
+								"elasticity": 0.1,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Floor"
+							}
+						}
+					},
+					"world": {
+						"x": 960,
+						"y": 99460,
+						"width": 13079.8,
+						"height": 540,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 50
 					}
 				}
 			],
@@ -446,8 +608,8 @@
 						}
 					},
 					"world": {
-						"x": 3840,
-						"y": 48000,
+						"x": 7500,
+						"y": 99110,
 						"width": 200,
 						"height": 200,
 						"originX": 0.5,
@@ -482,8 +644,8 @@
 						}
 					},
 					"world": {
-						"x": 3840,
-						"y": 39880,
+						"x": 7500,
+						"y": 91500,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -533,60 +695,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "WallInvisibleLeft",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 9,
-					"instanceVariables": {},
-					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": true,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.75,
-								"elasticity": 0.1,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Floor"
-							}
-						}
-					},
-					"world": {
-						"x": -1,
-						"y": 0,
-						"width": 2,
-						"height": 50000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "MinableMeteor",
 					"properties": {
 						"initially-visible": true,
@@ -606,8 +714,8 @@
 						}
 					},
 					"world": {
-						"x": 3840,
-						"y": 39341,
+						"x": 7500,
+						"y": 90000,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1043,8 +1151,8 @@
 	"sid": 562421436177207,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 7680,
-	"height": 50000,
+	"width": 15000,
+	"height": 100000,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
