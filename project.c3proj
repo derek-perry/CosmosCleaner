@@ -72,6 +72,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
@@ -98,14 +106,6 @@
 			"type": "behavior",
 			"id": "bound",
 			"name": "Bound to layout",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Anchor",
-			"name": "Anchor",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false

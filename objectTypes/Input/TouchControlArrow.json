@@ -3,8 +3,22 @@
 	"plugin-id": "Sprite",
 	"sid": 577129840362452,
 	"isGlobal": false,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "Direction",
+			"type": "string",
+			"desc": "The direction of this specific TouchControlArrow",
+			"show": true,
+			"sid": 622387781317086
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 444452687540623
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
