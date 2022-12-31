@@ -40,8 +40,8 @@
 		},
 		{
 			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Tiled Background",
+			"id": "PlatformInfo",
+			"name": "Platform info",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -50,6 +50,14 @@
 			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -112,7 +120,9 @@
 					"Gamepad",
 					"Keyboard",
 					"Mouse",
-					"Touch"
+					"Touch",
+					"PlatformInfo",
+					"TouchControlArrow"
 				],
 				"subfolders": [],
 				"name": "Input"

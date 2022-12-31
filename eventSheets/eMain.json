@@ -106,19 +106,78 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 784067498136775
+							"sid": 284405871962192
+						},
+						{
+							"id": "is-on-mobile",
+							"objectClass": "PlatformInfo",
+							"sid": 658902409344017
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "Notification",
-							"sid": 959421310557257,
+							"sid": 973244399641297,
 							"parameters": [
-								"\"Howdy\" & newline & \"WASD to move\""
+								"\"Howdy\" & newline & \"Move using the arrows on screen\"",
+								"3"
 							]
 						}
 					],
-					"sid": 343734927457002
+					"sid": 766693009518697
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 456729242287157
+						},
+						{
+							"id": "is-on-mobile",
+							"objectClass": "PlatformInfo",
+							"sid": 303435099242903,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Notification",
+							"sid": 717443012189362,
+							"parameters": [
+								"\"Howdy\" & newline & \"Move using WASD/Arrow Keys\"",
+								"3"
+							]
+						}
+					],
+					"sid": 352691801997897
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 556765231777231
+						},
+						{
+							"id": "has-gamepads",
+							"objectClass": "Gamepad",
+							"sid": 810051439567767
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Notification",
+							"sid": 984052669534139,
+							"parameters": [
+								"\"Howdy\" & newline & \"Move using the Left Stick\"",
+								"3"
+							]
+						}
+					],
+					"sid": 214500469373142
 				},
 				{
 					"functionName": "Notification",
@@ -134,6 +193,13 @@
 							"initialValue": "",
 							"comment": "The text to display for the new notification",
 							"sid": 839817371023195
+						},
+						{
+							"name": "DestroyDelay",
+							"type": "number",
+							"initialValue": "3",
+							"comment": "Amount of time before notification display text is emptied",
+							"sid": 793012019773797
 						}
 					],
 					"eventType": "function-block",
@@ -150,20 +216,61 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 130312827173416,
+							"sid": 801453213276883,
 							"parameters": {
-								"seconds": "5"
+								"seconds": "DestroyDelay"
 							}
 						},
 						{
-							"callFunction": "Notification",
-							"sid": 572693776875826,
+							"callFunction": "NotificationDestroy",
+							"sid": 836883500423224,
 							"parameters": [
-								"\"\""
+								"NotificationTextPassthrough"
 							]
 						}
 					],
 					"sid": 998539473219034
+				},
+				{
+					"functionName": "NotificationDestroy",
+					"functionDescription": "Empty the notification text display",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "OldNotificationText",
+							"type": "string",
+							"initialValue": "",
+							"comment": "The text to display for the new notification",
+							"sid": 440593635743149
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 310951947413996,
+							"parameters": {
+								"first-value": "OldNotificationText",
+								"comparison": 0,
+								"second-value": "Text_Notification.Text"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Notification",
+							"sid": 422220887461188,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 805195584140104
 				}
 			],
 			"sid": 683649590485013
@@ -254,7 +361,8 @@
 							"callFunction": "Notification",
 							"sid": 635272424872501,
 							"parameters": [
-								"\"Meteor Mined!\" & newline & \"+1 Money\""
+								"\"Meteor Mined!\" & newline & \"+1 Money\"",
+								"3"
 							]
 						},
 						{
@@ -294,7 +402,8 @@
 							"callFunction": "Notification",
 							"sid": 658909119614773,
 							"parameters": [
-								"\"Satellite Mined!\" & newline & \"+10 Money\""
+								"\"Satellite Mined!\" & newline & \"+10 Money\"",
+								"3"
 							]
 						},
 						{
