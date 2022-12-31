@@ -97,7 +97,7 @@
 			"eventType": "group",
 			"disabled": false,
 			"title": "Notification",
-			"description": "Spawning and Deleting the In-Game Notification Text",
+			"description": "Spawning and Deleting the In-Game Notification Text Display",
 			"isActiveOnStart": true,
 			"children": [
 				{
@@ -111,31 +111,59 @@
 					],
 					"actions": [
 						{
+							"callFunction": "Notification",
+							"sid": 959421310557257,
+							"parameters": [
+								"\"Howdy\" & newline & \"WASD to move\""
+							]
+						}
+					],
+					"sid": 343734927457002
+				},
+				{
+					"functionName": "Notification",
+					"functionDescription": "Update the notification text display",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "NotificationTextPassthrough",
+							"type": "string",
+							"initialValue": "",
+							"comment": "The text to display for the new notification",
+							"sid": 839817371023195
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
 							"id": "set-text",
 							"objectClass": "Text_Notification",
-							"sid": 196165953426176,
+							"sid": 110061105867331,
 							"parameters": {
-								"text": "\"Howdy\" & newline & \"WASD to move\""
+								"text": "NotificationTextPassthrough"
 							}
 						},
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 953070251983017,
+							"sid": 130312827173416,
 							"parameters": {
 								"seconds": "5"
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "Text_Notification",
-							"sid": 975786456675515,
-							"parameters": {
-								"text": "\"\""
-							}
+							"callFunction": "Notification",
+							"sid": 572693776875826,
+							"parameters": [
+								"\"\""
+							]
 						}
 					],
-					"sid": 343734927457002
+					"sid": 998539473219034
 				}
 			],
 			"sid": 683649590485013
@@ -223,6 +251,13 @@
 					],
 					"actions": [
 						{
+							"callFunction": "Notification",
+							"sid": 635272424872501,
+							"parameters": [
+								"\"Meteor Mined!\" & newline & \"+1 Money\""
+							]
+						},
+						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 903475091158027,
@@ -255,6 +290,13 @@
 						}
 					],
 					"actions": [
+						{
+							"callFunction": "Notification",
+							"sid": 658909119614773,
+							"parameters": [
+								"\"Satellite Mined!\" & newline & \"+10 Money\""
+							]
+						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
