@@ -49,9 +49,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 7500,
-						"y": 95243,
+						"y": 96660,
 						"width": 15000,
-						"height": 7934,
+						"height": 5100,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -261,7 +261,9 @@
 						"FuelFlow": 0,
 						"FuelFlowMin": 0.000175,
 						"FuelFlowMax": 0.00035,
-						"Idle": true
+						"RechargeRate": 0.00035,
+						"Idle": true,
+						"InSpace": false
 					},
 					"behaviors": {
 						"Physics": {
@@ -1015,7 +1017,7 @@
 				{
 					"type": "Text_Altitude",
 					"properties": {
-						"text": "Altitude: 999999",
+						"text": "Altitude: 999999 (Space)",
 						"enable-bbcode": true,
 						"font": "monospace",
 						"size": 18,
@@ -1050,7 +1052,7 @@
 					"world": {
 						"x": 25,
 						"y": 200,
-						"width": 250,
+						"width": 350,
 						"height": 30,
 						"originX": 0,
 						"originY": 0.5,

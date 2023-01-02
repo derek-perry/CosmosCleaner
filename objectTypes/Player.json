@@ -75,11 +75,25 @@
 			"sid": 905763342121307
 		},
 		{
+			"name": "RechargeRate",
+			"type": "number",
+			"desc": "Rate of Fuel Recharge",
+			"show": true,
+			"sid": 601471489593092
+		},
+		{
 			"name": "Idle",
 			"type": "boolean",
 			"desc": "Whether or Not the Player is in the Idle State.",
 			"show": false,
 			"sid": 207766986948980
+		},
+		{
+			"name": "InSpace",
+			"type": "boolean",
+			"desc": "Whether or Not the Player is in Space",
+			"show": false,
+			"sid": 909424421174262
 		}
 	],
 	"behaviorTypes": [

@@ -29,9 +29,18 @@
 					],
 					"actions": [
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 514732013719899,
+							"parameters": {
+								"instance-variable": "InSpace",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-world-gravity",
 							"objectClass": "Player",
-							"sid": 902693521366455,
+							"sid": 529268255164686,
 							"behaviorType": "Physics",
 							"parameters": {
 								"gravity": "10"
@@ -53,6 +62,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 307110671171217,
+							"parameters": {
+								"instance-variable": "InSpace",
+								"value": "false"
+							}
+						},
 						{
 							"id": "set-world-gravity",
 							"objectClass": "Player",
@@ -78,6 +96,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 426579150070802,
+							"parameters": {
+								"instance-variable": "InSpace",
+								"value": "true"
+							}
+						},
 						{
 							"id": "set-world-gravity",
 							"objectClass": "Player",
@@ -337,6 +364,110 @@
 						}
 					],
 					"sid": 259680797997044
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 547267797916488
+						}
+					],
+					"actions": [],
+					"sid": 122522292300751,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 926192934213243,
+									"parameters": {
+										"instance-variable": "Fuel",
+										"comparison": 3,
+										"value": "1-Player.RechargeRate"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 539062608422417,
+									"parameters": {
+										"instance-variable": "InSpace"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 988824941118389,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-text",
+											"objectClass": "Text_Time",
+											"sid": 666035874302863,
+											"parameters": {
+												"text-to-compare": "\"Day\"",
+												"case-sensitivity": "ignore-case"
+											}
+										},
+										{
+											"id": "compare-text",
+											"objectClass": "Text_Time",
+											"sid": 706633249539379,
+											"parameters": {
+												"text-to-compare": "\"Noon\"",
+												"case-sensitivity": "ignore-case"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "FuelRecharge",
+											"sid": 386734766186481
+										}
+									],
+									"sid": 569060885753219,
+									"isOrBlock": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "FuelRecharge",
+					"functionDescription": "Recharge the Player's Fuel Amount",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 495195720555586,
+							"parameters": {
+								"instance-variable": "Fuel",
+								"value": "Player.RechargeRate"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Fuel",
+							"sid": 136536746778619,
+							"parameters": {
+								"text": "\"Fuel: \" & (Player.Fuel*100) & \"%\""
+							}
+						}
+					],
+					"sid": 856944605905867
 				}
 			],
 			"sid": 794920324475650
@@ -563,17 +694,59 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 866712468139432,
+									"children": [
 										{
-											"id": "set-text",
-											"objectClass": "Text_Altitude",
-											"sid": 614823559011773,
-											"parameters": {
-												"text": "\"Altitude: \" & str((abs(int(Player.Y-99109))/10))"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player",
+													"sid": 613832367696048,
+													"parameters": {
+														"instance-variable": "InSpace"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Altitude",
+													"sid": 556533507519312,
+													"parameters": {
+														"text": "\"Altitude: \" & str((abs(int(Player.Y-99109))/10)) & \" (Space)\""
+													}
+												}
+											],
+											"sid": 209769719443584
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player",
+													"sid": 141900638140226,
+													"parameters": {
+														"instance-variable": "InSpace"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Altitude",
+													"sid": 104792015620145,
+													"parameters": {
+														"text": "\"Altitude: \" & str((abs(int(Player.Y-99109))/10))"
+													}
+												}
+											],
+											"sid": 504917082108938
 										}
-									],
-									"sid": 866712468139432
+									]
 								},
 								{
 									"eventType": "block",
