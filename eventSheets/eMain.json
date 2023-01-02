@@ -46,7 +46,7 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Player",
-							"sid": 875560452941980,
+							"sid": 530921851176483,
 							"parameters": {
 								"object": "AreaSky"
 							}
@@ -457,6 +457,38 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Day/Night Cycle",
+			"description": "Sky Changes and Time Management for the Day/Night Cycle",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 557434682530556
+						}
+					],
+					"actions": [
+						{
+							"id": "play-timeline",
+							"objectClass": "TimelineController",
+							"sid": 220666019681138,
+							"parameters": {
+								"timeline": "DayCycle",
+								"tags": "\"DayNightCycle\""
+							}
+						}
+					],
+					"sid": 438770363484380
+				}
+			],
+			"sid": 833701252504217
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Movement",
 			"description": "Physics and Animations Management for Player Movement",
 			"isActiveOnStart": true,
@@ -464,10 +496,139 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Altitude Display",
+					"description": "Text Display of Player's Altitude/Y-Coordinate",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 935320080513709
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "AltitudeUpdate",
+									"sid": 983774610194817
+								}
+							],
+							"sid": 419685361190730
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 381345453224179,
+									"parameters": {
+										"interval-seconds": "0.1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "AltitudeUpdate",
+									"sid": 845559024238544
+								}
+							],
+							"sid": 386032235420407
+						},
+						{
+							"functionName": "AltitudeUpdate",
+							"functionDescription": "Update the Text Display for Player Altitude",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 374694691033085,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "Player",
+											"sid": 461029649570138,
+											"parameters": {
+												"comparison": 3,
+												"y-co-ordinate": "99109"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Text_Altitude",
+											"sid": 614823559011773,
+											"parameters": {
+												"text": "\"Altitude: \" & str((abs(int(Player.Y-99109))/10))"
+											}
+										}
+									],
+									"sid": 866712468139432
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "Player",
+											"sid": 792634283151829,
+											"parameters": {
+												"comparison": 4,
+												"y-co-ordinate": "99109"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Text_Altitude",
+											"sid": 553829171450596,
+											"parameters": {
+												"text": "\"Altitude: Ground\""
+											}
+										}
+									],
+									"sid": 840537269958038
+								}
+							]
+						}
+					],
+					"sid": 199193091240873
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Movement Functions",
 					"description": "Gameplay Functions for Player Movement",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 233273667889189
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "BoostStop",
+									"sid": 454830132082940
+								}
+							],
+							"sid": 280347327111687
+						},
 						{
 							"functionName": "IdleStart",
 							"functionDescription": "Player's Idle State - Start",
@@ -528,28 +689,28 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Player",
-									"sid": 205060853526756,
+									"sid": 353398749585307,
 									"parameters": {
 										"instance-variable": "MovementSpeedHorizontal",
-										"value": "3"
+										"value": "Player.MovementSpeedHorizontalMax"
 									}
 								},
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Player",
-									"sid": 995375778770188,
+									"sid": 752208675083170,
 									"parameters": {
 										"instance-variable": "MovementSpeedVertical",
-										"value": "4"
+										"value": "Player.MovementSpeedVerticalMax"
 									}
 								},
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Player",
-									"sid": 380987674873282,
+									"sid": 835442437768172,
 									"parameters": {
 										"instance-variable": "FuelFlow",
-										"value": "0.0003"
+										"value": "Player.FuelFlowMax"
 									}
 								}
 							],
@@ -569,28 +730,28 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Player",
-									"sid": 750019957730066,
+									"sid": 782975161543234,
 									"parameters": {
 										"instance-variable": "MovementSpeedHorizontal",
-										"value": "1.75"
+										"value": "Player.MovementSpeedHorizontalMin"
 									}
 								},
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Player",
-									"sid": 263605568687301,
+									"sid": 708084101748682,
 									"parameters": {
 										"instance-variable": "MovementSpeedVertical",
-										"value": "2"
+										"value": "Player.MovementSpeedVerticalMin"
 									}
 								},
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Player",
-									"sid": 854220706017307,
+									"sid": 355899167394673,
 									"parameters": {
 										"instance-variable": "FuelFlow",
-										"value": "0.000175"
+										"value": "Player.FuelFlowMin"
 									}
 								}
 							],
@@ -613,7 +774,7 @@
 									"parameters": {
 										"instance-variable": "Fuel",
 										"comparison": 4,
-										"value": "Player.FuelFlow"
+										"value": "Player.FuelFlowMin"
 									}
 								}
 							],
@@ -621,7 +782,7 @@
 								{
 									"id": "apply-impulse",
 									"objectClass": "Player",
-									"sid": 434860493559402,
+									"sid": 712535837963986,
 									"behaviorType": "Physics",
 									"parameters": {
 										"impulse-x": "0",
@@ -632,7 +793,7 @@
 								{
 									"id": "subtract-from-instvar",
 									"objectClass": "Player",
-									"sid": 133528295006880,
+									"sid": 474282629132028,
 									"parameters": {
 										"instance-variable": "Fuel",
 										"value": "Player.FuelFlow"
@@ -702,7 +863,7 @@
 									"parameters": {
 										"instance-variable": "Fuel",
 										"comparison": 4,
-										"value": "Player.FuelFlow"
+										"value": "Player.FuelFlowMin"
 									}
 								}
 							],
@@ -710,7 +871,7 @@
 								{
 									"id": "apply-impulse",
 									"objectClass": "Player",
-									"sid": 239387627554121,
+									"sid": 948904055447752,
 									"behaviorType": "Physics",
 									"parameters": {
 										"impulse-x": "0",
@@ -721,7 +882,7 @@
 								{
 									"id": "subtract-from-instvar",
 									"objectClass": "Player",
-									"sid": 850373800015696,
+									"sid": 727125575101163,
 									"parameters": {
 										"instance-variable": "Fuel",
 										"value": "Player.FuelFlow"
@@ -791,7 +952,7 @@
 									"parameters": {
 										"instance-variable": "Fuel",
 										"comparison": 4,
-										"value": "Player.FuelFlow"
+										"value": "Player.FuelFlowMin"
 									}
 								}
 							],
@@ -799,7 +960,7 @@
 								{
 									"id": "apply-impulse",
 									"objectClass": "Player",
-									"sid": 446629845973038,
+									"sid": 819905101464915,
 									"behaviorType": "Physics",
 									"parameters": {
 										"impulse-x": "-Player.MovementSpeedHorizontal",
@@ -810,7 +971,7 @@
 								{
 									"id": "subtract-from-instvar",
 									"objectClass": "Player",
-									"sid": 896270638902536,
+									"sid": 755893638521535,
 									"parameters": {
 										"instance-variable": "Fuel",
 										"value": "Player.FuelFlow"
@@ -892,7 +1053,7 @@
 									"parameters": {
 										"instance-variable": "Fuel",
 										"comparison": 4,
-										"value": "Player.FuelFlow"
+										"value": "Player.FuelFlowMin"
 									}
 								}
 							],
@@ -900,7 +1061,7 @@
 								{
 									"id": "apply-impulse",
 									"objectClass": "Player",
-									"sid": 822391026322680,
+									"sid": 129271835690712,
 									"behaviorType": "Physics",
 									"parameters": {
 										"impulse-x": "Player.MovementSpeedHorizontal",
@@ -911,7 +1072,7 @@
 								{
 									"id": "subtract-from-instvar",
 									"objectClass": "Player",
-									"sid": 113440804438091,
+									"sid": 183750365575587,
 									"parameters": {
 										"instance-variable": "Fuel",
 										"value": "Player.FuelFlow"

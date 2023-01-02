@@ -7,16 +7,44 @@
 		{
 			"name": "MovementSpeedHorizontal",
 			"type": "number",
-			"desc": "Current Horizontal Movement Speed",
+			"desc": "Player's Current Horizontal Movement Speed",
+			"show": false,
+			"sid": 655856789468058
+		},
+		{
+			"name": "MovementSpeedHorizontalMin",
+			"type": "number",
+			"desc": "Player's Minimum Horizontal Movement Speed",
 			"show": true,
 			"sid": 884936824625169
 		},
 		{
+			"name": "MovementSpeedHorizontalMax",
+			"type": "number",
+			"desc": "Player's Maximum Horizontal Movement Speed",
+			"show": true,
+			"sid": 686943952949999
+		},
+		{
 			"name": "MovementSpeedVertical",
 			"type": "number",
-			"desc": "Current Vertical Movement Speed",
+			"desc": "Player's Current Vertical Movement Speed",
+			"show": false,
+			"sid": 789042140235589
+		},
+		{
+			"name": "MovementSpeedVerticalMin",
+			"type": "number",
+			"desc": "Player's Minimum Vertical Movement Speed",
 			"show": true,
 			"sid": 364038092919498
+		},
+		{
+			"name": "MovementSpeedVerticalMax",
+			"type": "number",
+			"desc": "Player's Maximum Vertical Movement Speed",
+			"show": true,
+			"sid": 118623968385892
 		},
 		{
 			"name": "Fuel",
@@ -28,14 +56,28 @@
 		{
 			"name": "FuelFlow",
 			"type": "number",
-			"desc": "Amount of Fuel used per usage.",
+			"desc": "Current Amount of Fuel used \"per movement.\"",
+			"show": false,
+			"sid": 289773354723733
+		},
+		{
+			"name": "FuelFlowMin",
+			"type": "number",
+			"desc": "Minimum Amount of Fuel used \"per movement.\"",
 			"show": true,
 			"sid": 807214482154855
 		},
 		{
+			"name": "FuelFlowMax",
+			"type": "number",
+			"desc": "Maximum Amount of Fuel used \"per movement.\"",
+			"show": true,
+			"sid": 905763342121307
+		},
+		{
 			"name": "Idle",
 			"type": "boolean",
-			"desc": "The player's idle state.",
+			"desc": "Whether or Not the Player is in the Idle State.",
 			"show": false,
 			"sid": 207766986948980
 		}

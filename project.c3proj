@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline controller",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Anchor",
 			"name": "Anchor",
@@ -113,7 +121,10 @@
 	],
 	"uniqueId": "u5ben1as51z",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Player",
+			"TimelineController"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -130,22 +141,23 @@
 			{
 				"items": [
 					"PlatformGround",
-					"AreaSky",
 					"AreaSpace",
-					"WallInvisible"
+					"WallInvisible",
+					"AreaSky"
 				],
 				"subfolders": [],
 				"name": "Level"
 			},
 			{
 				"items": [
-					"Player",
 					"Text_Fuel",
 					"Text_Notification",
-					"Text_Money"
+					"Text_Money",
+					"Text_Time",
+					"Text_Altitude"
 				],
 				"subfolders": [],
-				"name": "Player"
+				"name": "Text"
 			},
 			{
 				"items": [
@@ -265,7 +277,9 @@
 		}
 	},
 	"timelines": {
-		"items": [],
+		"items": [
+			"DayCycle"
+		],
 		"subfolders": [
 			{
 				"items": [],

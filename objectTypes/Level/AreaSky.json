@@ -1,7 +1,7 @@
 {
 	"name": "AreaSky",
 	"plugin-id": "Sprite",
-	"sid": 409031082236246,
+	"sid": 149506064900968,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,33 +18,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 612237,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								0.5,
-								0,
-								0.996,
-								0,
-								0.996,
-								0.5,
-								0.996,
-								0.996,
-								0.5,
-								0.996,
-								0,
-								0.996,
-								0,
-								0.5
-							]
-						},
+						"imageSpriteId": 801507,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 866714453827180,
-				"name": "AreaSky",
+				"sid": 654358980506071,
+				"name": "Sky",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

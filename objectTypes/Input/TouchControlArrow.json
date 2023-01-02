@@ -58,7 +58,7 @@
 					}
 				],
 				"sid": 355347484134239,
-				"name": "Arrow",
+				"name": "TouchControlArrow",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
