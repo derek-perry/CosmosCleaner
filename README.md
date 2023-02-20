@@ -1,20 +1,35 @@
-# Rosebud
-### Code for Derek Perry's game, Rosebud.
-_[Game; Game Tech, Game Design; Game Development]_
+# Cosmos Cleaner _(cc)_
+### A 2.5D space vehicle arcade collect-a-thon game.
+_[Game; Game Tech, Game Design]_
 
-**Game Development Started:** December 5, 2022
+**Game Development Started:** January 16, 2023
 
-**Made Using:** Construct 3, Adobe Photoshop, Adobe Illustrator
-
----
-
-### Related Links
-- **Derek Perry's Website:** [dp.design](https://dp.design "Visit Derek Perry's portfolio/website dp.design")
-- **Rosebud GitHub:** [github.com/derek-perry/Rosebud](https://github.com/derek-perry/Rosebud "Visit the GitHub for Derek Perry's game, Rosebud, at github.com/derek-perry/Rosebud")
+**Made Using:** Unreal Engine 4.27.2, Adobe Photoshop, Adobe Illustrator
 
 ---
 
-### License Information
-**[Rosebud](https://github.com/derek-perry/Rosebud "Visit the GitHub for Derek Perry's game, Rosebud, at github.com/derek-perry/Rosebud") is licensed under the GNU General Public License v3.0**
-_(View the accompanying LICENSE file for more information on the "GNU General Public License v3.0" license.)_
-If you use [Rosebud’s files](https://github.com/derek-perry/Rosebud "Visit the GitHub for Derek Perry's game, Rosebud, at github.com/derek-perry/Rosebud"), please retain the licenses of the files below which were used in the development of [Rosebud](https://github.com/derek-perry/Rosebud "Visit the GitHub for Derek Perry's game, Rosebud, at github.com/derek-perry/Rosebud").
+### Game Links
+- **Game Website:** [dp.design/cc](https://dp.design/cc "Visit the main game website for Cosmos Cleaner at dp.design/m3")
+- **Game Privacy Policy:** [dp.design/ccprivacy](https://dp.design/ccprivacy "Visit the privacy policy for Cosmos Cleaner at dp.design/ccprivacy")
+- **Game Copyright Information:** [dp.design/cc#copyright](https://dp.design/cc#copyright "View the game copyright information for Cosmos Cleaner at dp.design/cc#copyright")
+- **GitHub:** [github.com/derek-perry/CosmosCleaner](https://github.com/derek-perry/CosmosCleaner "Visit the GitHub for Cosmos Cleaner at github.com/derek-perry/CosmosCleaner")
+
+---
+
+### Copyright Information
+**Copyright 2023 Cosmos Cleaner TM**
+**Some rights reserved.**
+Use  of [Cosmos Cleaner’s code](https://github.com/derek-perry/CosmosCleaner "View Cosmos Cleaner by Derek Perry on GitHub") is strictly forbidden.
+
+**Font Used:**
+- [Poppins](https://github.com/itfoundry/Poppins "View the Poppins font on GitHub") by [Indian Type Foundry](https://github.com/itfoundry) (Copyright 2014-2019 Indian Type Foundry) (SIL Open Font License 1.1)
+
+**Music Audio Used:**
+- [Johannes Brahms – Tragic Overture, Op. 81](https://musopen.org/music/2120-tragic-overture-op-81/#recordings "Visit the music recording source of Johannes Brahms' Tragic Overture, Op. 81 on musopen.org") by [Musopen Symphony](https://musopen.org/music/performer/musopen-symphony "Visit Musopen Symphony, the performer/recorder of the music recording for Johannes Brahms' Tragic Overture, Op. 81, on musopen.org") (Public Domain Mark 1.0)
+- [Felix Mendelssohn – The Hebrides (Fingal’s Cave), Op. 26](https://musopen.org/music/306-the-hebrides-fingals-cave-op-26/#recordings "Visit the music recording source of Felix Mendelssohn's The Hebrides (Fingal's Cave), Op. 26 on musopen.org") by [Musopen Symphony](https://musopen.org/music/performer/musopen-symphony "Visit Musopen Symphony, the performer/recorder of the music recording for Felix Mendelssohn's The Hebrides (Fingal's Cave), Op. 26, on musopen.org") (Public Domain Mark 1.0)
+
+**SFX Audio Used:**
+- [Button_Hover (ogg)](https://freesound.org/people/deadsillyrabbit/sounds/251389 "Visit the Button Hover sound source on Freesound.org") _(“A_SFX_Hover”)_ by [deadsillyrabbit](https://freesound.org/people/deadsillyrabbit "Visit deadsillyrabbit, the creator of the Button Hover sound, on Freesound.org") (CC0 1.0 Universal)
+- [Pop](https://freesound.org/people/DuffyBro/sounds/319107 "Visit the Pop or Button Click sound source on Freesound.org") _(“A_SFX_Click”)_ by [DuffyBro](https://freesound.org/people/DuffyBro "Visit DuffyBro, the creator of the Pop or Button Click sound, on Freesound.org") (CC0 1.0 Universal)
+
+---
