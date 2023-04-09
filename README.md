@@ -9,10 +9,11 @@ _[Game; Game Tech, Game Design]_
 ---
 
 ### Game Links
-- **Game Website:** [dp.design/cc](https://dp.design/cc "Visit the main game website for Cosmos Cleaner at dp.design/m3")
-- **Game Privacy Policy:** [dp.design/ccprivacy](https://dp.design/ccprivacy "Visit the privacy policy for Cosmos Cleaner at dp.design/ccprivacy")
-- **Game Copyright Information:** [dp.design/cc#copyright](https://dp.design/cc#copyright "View the game copyright information for Cosmos Cleaner at dp.design/cc#copyright")
-- **GitHub:** [github.com/derek-perry/CosmosCleaner](https://github.com/derek-perry/CosmosCleaner "Visit the GitHub for Cosmos Cleaner at github.com/derek-perry/CosmosCleaner")
+- **Game Website:** [cosmoscleaner.com](https://cosmoscleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com")
+- **Game Privacy Policy:** [cosmoscleaner.com/privacy](https://cosmoscleaner.com/privacy "Visit the privacy policy for Cosmos Cleaner at CosmosCleaner.com/privacy")
+- **Game Copyright Information:** [cosmoscleaner.com/copyright](https://cosmoscleaner.com/copyright "View the copyright information for Cosmos Cleaner at CosmosCleaner.com/copyright")
+- **Game GitHub:** [github.com/derek-perry/CosmosCleaner](https://github.com/derek-perry/CosmosCleaner "Visit the GitHub for Cosmos Cleaner at github.com/derek-perry/CosmosCleaner")
+- **Website GitHub:** [github.com/derek-perry/CosmosCleaner](https://github.com/derek-perry/CosmosCleaner "Visit the GitHub for Cosmos Cleaner at github.com/derek-perry/CosmosCleaner")
 
 ---
 
