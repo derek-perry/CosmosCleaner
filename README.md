@@ -2,16 +2,16 @@
 ### A 2.5D space vehicle arcade collect-a-thon game.
 _[Game; Game Tech, Game Design]_
 
-**Game Development Started:** January 16, 2023
+**Game Development Started:** April 9, 2023
 
 **Made Using:** Unreal Engine 4.27.2, Adobe Photoshop, Adobe Illustrator
 
 ---
 
 ### Game Links
-- **Game Website:** [cosmoscleaner.com](https://cosmoscleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com")
-- **Game Privacy Policy:** [cosmoscleaner.com/privacy](https://cosmoscleaner.com/privacy "Visit the privacy policy for Cosmos Cleaner at CosmosCleaner.com/privacy")
-- **Game Copyright Information:** [cosmoscleaner.com/copyright](https://cosmoscleaner.com/copyright "View the copyright information for Cosmos Cleaner at CosmosCleaner.com/copyright")
+- **Game Website:** [CosmosCleaner.com](https://CosmosCleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com")
+- **Game Privacy Policy:** [CosmosCleaner.com/privacy](https://CosmosCleaner.com/privacy "Visit the privacy policy for Cosmos Cleaner at CosmosCleaner.com/privacy")
+- **Game Copyright Information:** [CosmosCleaner.com/copyright](https://CosmosCleaner.com/copyright "View the copyright information for Cosmos Cleaner at CosmosCleaner.com/copyright")
 - **Game GitHub:** [github.com/derek-perry/CosmosCleaner](https://github.com/derek-perry/CosmosCleaner "Visit the GitHub for Cosmos Cleaner at github.com/derek-perry/CosmosCleaner")
 - **Website GitHub:** [github.com/derek-perry/CosmosCleaner](https://github.com/derek-perry/CosmosCleaner "Visit the GitHub for Cosmos Cleaner at github.com/derek-perry/CosmosCleaner")
 
