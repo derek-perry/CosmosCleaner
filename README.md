@@ -1,5 +1,6 @@
 # Cosmos Cleaner
 ### Clean up space junk, upgrade your ship, and become the best cleaner in the cosmos!
+
 _[Game, Game Dev, Game Tech, Game Design]_
 
 **Made Using:** Unreal Engine 5.2.1, Adobe Photoshop, Adobe Illustrator
@@ -18,8 +19,12 @@ _[Game, Game Dev, Game Tech, Game Design]_
 
 ### Copyright Information
 **Cosmos Cleaner TM Copyright 2023 [Derek Perry](https://dp.design "Go to Derek Perry, the creator of Cosmos Cleaner, at dp.design")**
+
 **Some rights reserved.**
+
 Use  of [Cosmos Cleaner’s code](https://github.com/derek-perry/CosmosCleaner "View Cosmos Cleaner by Derek Perry on GitHub") is strictly forbidden.
+
+Use of [the code for Cosmos Cleaner's website](https://github.com/derek-perry/CosmosCleaner-Website "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website") is licensed under the [MIT License](https://mit.edu/~amini/LICENSE.md "View the Official MIT License at mit.edu/~amini/LICENSE.md") (see the website's [README.md](https://github.com/derek-perry/CosmosCleaner-Website#readme "Visit the README.md file in the GitHub repo for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website#readme") for more details).
 
 **Fonts Used:**
 - [Bai Jamjuree](https://github.com/cadsondemak/Bai-Jamjuree "View Bai Jamjuree on GitHub")
