@@ -17,16 +17,18 @@ _[Game, Game Dev, Game Tech, Game Design]_
 
 ---
 
-### Copyright Information
-**Cosmos Cleaner TM Copyright 2023 [Derek Perry](https://dp.design "Go to Derek Perry, the developer of Cosmos Cleaner, at dp.design")**
+### Copyright/License Information
+**[Cosmos Cleaner](https://CosmosCleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com") TM Copyright 2023 [Derek Perry](https://dp.design "Go to Derek Perry, the developer of Cosmos Cleaner, at dp.design")**
 
 **All rights reserved.**
 
 Use  of [Cosmos Cleaner’s code](https://github.com/derek-perry/CosmosCleaner "View Cosmos Cleaner by Derek Perry on GitHub") is strictly forbidden.
 
-However, use of [the code for Cosmos Cleaner's website](https://github.com/derek-perry/CosmosCleaner-Website "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website") is licensed under the [MIT License](https://mit.edu/~amini/LICENSE.md "View the Official MIT License at mit.edu/~amini/LICENSE.md") (see the website's [README.md](https://github.com/derek-perry/CosmosCleaner-Website#readme "Visit the README.md file in the GitHub repo for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website#readme") for more details).
+However, use of [the code for Cosmos Cleaner's website](https://github.com/derek-perry/CosmosCleaner-Website "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website") is licensed under the [MIT License](https://mit.edu/~amini/LICENSE.md "View the Official MIT License at mit.edu/~amini/LICENSE.md"). (See the website's [README.md](https://github.com/derek-perry/CosmosCleaner-Website#readme "Visit the README.md file in the GitHub repo for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website#readme") for more details)
 
-**Fonts Used**
+
+**Fonts Used:**
+
 - [Bai Jamjuree](https://github.com/cadsondemak/Bai-Jamjuree "View Bai Jamjuree on GitHub")
 	- By [Cadson Demak](https://github.com/cadsondemak "Go to Cadson Demak, the Creator of Bai Jamjuree, on GitHub") ([SIL Open Font License 1.1](https://scripts.sil.org/ofl" "View the Official SIL Open Font License 1.1 at scripts.sil.org/ofl")) Copyright 2008
 	- Google Fonts Link: [fonts.google.com/specimen/Bai+Jamjuree](https://fonts.google.com/specimen/Bai+Jamjuree "View Bai Jamjuree on Google Fonts")
@@ -45,11 +47,15 @@ However, use of [the code for Cosmos Cleaner's website](https://github.com/derek
 	- Used in:
 		- Logo Text "Cleaner"
 
-**Music Audio Used**
+
+**Music Audio Used:**
+
 - [Johannes Brahms – Tragic Overture, Op. 81](https://musopen.org/music/2120-tragic-overture-op-81/#recordings "Visit the music recording source of Johannes Brahms' Tragic Overture, Op. 81 on musopen.org") by [Musopen Symphony](https://musopen.org/music/performer/musopen-symphony "Visit Musopen Symphony, the performer/recorder of the music recording for Johannes Brahms' Tragic Overture, Op. 81, on musopen.org") (Public Domain Mark 1.0)
 - [Felix Mendelssohn – The Hebrides (Fingal’s Cave), Op. 26](https://musopen.org/music/306-the-hebrides-fingals-cave-op-26/#recordings "Visit the music recording source of Felix Mendelssohn's The Hebrides (Fingal's Cave), Op. 26 on musopen.org") by [Musopen Symphony](https://musopen.org/music/performer/musopen-symphony "Visit Musopen Symphony, the performer/recorder of the music recording for Felix Mendelssohn's The Hebrides (Fingal's Cave), Op. 26, on musopen.org") (Public Domain Mark 1.0)
 
-**SFX Audio Used**
+
+**SFX Audio Used:**
+
 - [Button_Hover (ogg)](https://freesound.org/people/deadsillyrabbit/sounds/251389 "Visit the Button Hover sound source on Freesound.org") _(“A_SFX_Hover”)_ by [deadsillyrabbit](https://freesound.org/people/deadsillyrabbit "Visit deadsillyrabbit, the creator of the Button Hover sound, on Freesound.org") (CC0 1.0 Universal)
 - [Pop](https://freesound.org/people/DuffyBro/sounds/319107 "Visit the Pop or Button Click sound source on Freesound.org") _(“A_SFX_Click”)_ by [DuffyBro](https://freesound.org/people/DuffyBro "Visit DuffyBro, the creator of the Pop or Button Click sound, on Freesound.org") (CC0 1.0 Universal)
 
