@@ -104,6 +104,9 @@ Build/*/**
 !Build/Android/res/*/
 !Build/Android/res/*/*.png
 
+# Non-essential Hololens files
+Platforms/HoloLens/*
+
 # Non-essential mobile app files
 Build/IOS/Resources/*
 Build/IOS/Resources/Graphics/*
