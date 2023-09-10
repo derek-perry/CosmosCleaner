@@ -1,8 +1,8 @@
 {
 	"FileVersion": 3,
 	"EngineAssociation": "5.2",
-	"Category": "",
-	"Description": "",
+	"Category": "Arcade",
+	"Description": "Clean up space junk, upgrade your ship, and become the best cleaner in the cosmos!",
 	"Plugins": [
 		{
 			"Name": "OculusVR",
@@ -131,22 +131,20 @@
 			"Name": "AutoSizeComments",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/ae89a2c4ab384de0a3f213b23de324f3"
-		},
-		{
-			"Name": "DarkerNodes",
-			"Enabled": false,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4b3441f0228a40ec9ca986489a5bd682"
 		}
 	],
 	"TargetPlatforms": [
-		"Android",
+		"Lumin",
 		"AllDesktop",
-		"IOS",
+		"WindowsNoEditor",
+		"Windows",
 		"LinuxNoEditor",
 		"LinuxAArch64NoEditor",
-		"Lumin",
+		"Linux",
+		"LinuxArm64",
 		"MacNoEditor",
-		"TVOS",
-		"WindowsNoEditor"
+		"Mac",
+		"IOS",
+		"Android"
 	]
 }
