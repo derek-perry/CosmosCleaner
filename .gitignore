@@ -85,6 +85,7 @@ Plugins/*/Binaries/*
 Build/*
 Build/*/**
 /Engine/Programs/UnrealBuildTool/**
+Windows/*
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
