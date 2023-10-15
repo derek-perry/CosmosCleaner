@@ -87,10 +87,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "AudioModulation",
-			"Enabled": true
-		},
-		{
 			"Name": "MagicLeapMedia",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
