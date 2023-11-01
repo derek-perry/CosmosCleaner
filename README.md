@@ -9,22 +9,26 @@ _[Game, Game Dev, Game Tech, Game Design]_
 
 ### Links
 - **Game Website:** [CosmosCleaner.com](https://CosmosCleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com")
+- **Game Wiki:** [Wiki.CosmosCleaner.com](https://Wiki.CosmosCleaner.com "Visit the game wiki for Cosmos Cleaner at Wiki.CosmosCleaner.com")
 - **Game Privacy Policy:** [CosmosCleaner.com/privacy](https://CosmosCleaner.com/privacy "Visit the privacy policy for Cosmos Cleaner at CosmosCleaner.com/privacy")
 - **Game Copyright Information:** [CosmosCleaner.com/copyright](https://CosmosCleaner.com/copyright "View the copyright information for Cosmos Cleaner at CosmosCleaner.com/copyright")
 - **Game By:** [Derek Perry - dp.design](https://dp.design "Go to Derek Perry, the developer of Cosmos Cleaner, at dp.design")
 - **Game GitHub:** [github.com/derek-perry/CosmosCleaner](https://github.com/derek-perry/CosmosCleaner "Visit the GitHub for Cosmos Cleaner at github.com/derek-perry/CosmosCleaner")
-- **Website GitHub:** [github.com/derek-perry/CosmosCleaner-Website](https://github.com/derek-perry/CosmosCleaner-Website "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website")
+- **Website GitHub:** [github.com/derek-perry/cosmoscleaner.com](https://github.com/derek-perry/cosmoscleaner.com "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/cosmoscleaner.com")
+- **Wiki GitHub:** [github.com/derek-perry/wiki.cosmoscleaner.com](https://github.com/derek-perry/wiki.cosmoscleaner.com "Visit the GitHub for Cosmos Cleaner's Wiki at github.com/derek-perry/wiki.cosmoscleaner.com")
 
 ---
 
 ### Copyright/License Information
 **[Cosmos Cleaner](https://CosmosCleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com") TM Copyright 2023 [Derek Perry](https://dp.design "Go to Derek Perry, the developer of Cosmos Cleaner, at dp.design")**
 
-**All rights reserved.**
+**Some rights reserved.**
 
 Use  of [Cosmos Cleaner’s code](https://github.com/derek-perry/CosmosCleaner "View Cosmos Cleaner by Derek Perry on GitHub") is strictly forbidden.
 
-However, use of [the code for Cosmos Cleaner's website](https://github.com/derek-perry/CosmosCleaner-Website "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website") is licensed under the [MIT License](https://mit.edu/~amini/LICENSE.md "View the Official MIT License at mit.edu/~amini/LICENSE.md"). (See the website's [README.md](https://github.com/derek-perry/CosmosCleaner-Website#readme "Visit the README.md file in the GitHub repo for Cosmos Cleaner's Website at github.com/derek-perry/CosmosCleaner-Website#readme") for more details)
+However, use of [the code for Cosmos Cleaner's website](https://github.com/derek-perry/cosmoscleaner.com "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/cosmoscleaner.com") is licensed under the [MIT License](https://mit.edu/~amini/LICENSE.md "View the Official MIT License at mit.edu/~amini/LICENSE.md"). (See the website's [README.md](https://github.com/derek-perry/cosmoscleaner.com#readme "Visit the README.md file in the GitHub repo for Cosmos Cleaner's Website at github.com/derek-perry/cosmoscleaner.com#readme") for more details)
+
+Use of [the code for Cosmos Cleaner's wiki](https://github.com/derek-perry/wiki.cosmoscleaner.com "Visit the GitHub for Cosmos Cleaner's Wiki at github.com/derek-perry/wiki.cosmoscleaner.com") is licensed under the [BSD 2-Clause "Simplified" License](https://github.com/mkdocs/mkdocs/blob/master/LICENSE "View the Official MIT License at github.com/mkdocs/mkdocs/blob/master/LICENSE"). (See the wiki's [README.md](https://github.com/derek-perry/wiki.cosmoscleaner.com#readme "Visit the README.md file in the GitHub repo for Cosmos Cleaner's Wiki at github.com/derek-perry/wiki.cosmoscleaner.com#readme") for more details)
 
 
 **Fonts Used:**
