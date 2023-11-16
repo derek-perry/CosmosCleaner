@@ -3,7 +3,7 @@
 
 _[Game, Game Dev, Game Tech, Game Design]_
 
-**Made Using:** Unreal Engine 5.3.1, Adobe Photoshop, Adobe Illustrator
+**Made Using:** Unreal Engine 5.3.2, Adobe Photoshop, Adobe Illustrator
 
 ---
 
