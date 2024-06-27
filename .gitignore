@@ -86,6 +86,8 @@ Build/*
 Build/*/**
 /Engine/Programs/UnrealBuildTool/**
 Windows/*
+Android_ETC2/*
+Android_ASTC/*
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
