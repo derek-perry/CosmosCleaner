@@ -3,7 +3,7 @@
 
 _[Game, Game Dev, Game Tech, Game Design]_
 
-**Made Using:** Unreal Engine 5.3.2, Adobe Photoshop, Adobe Illustrator
+**Made Using:** Unreal Engine 5.4.3, Adobe Photoshop, Adobe Illustrator
 
 ---
 
@@ -32,8 +32,8 @@ _[Game, Game Dev, Game Tech, Game Design]_
 ---
 
 ## Copyright/License Information
-**Copyright © 2023 [Cosmos Cleaner](https://CosmosCleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com")™**
-**Game by [Derek Perry](https://dp.design "Go to Derek Perry, the developer of Cosmos Cleaner, at dp.design")**
+**Copyright © 2023-2024 [Cosmos Cleaner](https://CosmosCleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com")™**
+**Game by [Derek Perry](https://derek-perry.com "Go to Derek Perry, the developer of Cosmos Cleaner, at derek-perry.com")**
 
 **Some rights reserved.**
 
