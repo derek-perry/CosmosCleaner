@@ -1,6 +1,7 @@
 # Cosmos Cleaner
-## Clean up space junk, upgrade your ship, and become the best cleaner in the cosmos!
+**Clean up space junk, upgrade your ship, and become the best cleaner in the cosmos!**
 
+_(This repository contains the game Cosmos Cleaner.)_
 _[Game, Game Dev, Game Tech, Game Design]_
 
 **Made Using:** Unreal Engine 5.4.3, Adobe Photoshop, Adobe Illustrator
@@ -33,11 +34,12 @@ _[Game, Game Dev, Game Tech, Game Design]_
 
 ## Copyright/License Information
 **Copyright © 2023-2024 [Cosmos Cleaner](https://CosmosCleaner.com "Visit the game website for Cosmos Cleaner at CosmosCleaner.com")™**
+
 **Game by [Derek Perry](https://derek-perry.com "Go to Derek Perry, the developer of Cosmos Cleaner, at derek-perry.com")**
 
 **Some rights reserved.**
 
-Use  of [Cosmos Cleaner’s code](https://github.com/derek-perry/CosmosCleaner "View Cosmos Cleaner by Derek Perry on GitHub") is strictly forbidden.
+Use of [Cosmos Cleaner’s code](https://github.com/derek-perry/CosmosCleaner "View Cosmos Cleaner by Derek Perry on GitHub") is strictly forbidden.
 
 However, use of [the code for Cosmos Cleaner's website](https://github.com/derek-perry/cosmoscleaner.com "Visit the GitHub for Cosmos Cleaner's Website at github.com/derek-perry/cosmoscleaner.com") is licensed under the [MIT License](https://mit.edu/~amini/LICENSE.md "View the Official MIT License at mit.edu/~amini/LICENSE.md"). (See the website's [README.md](https://github.com/derek-perry/cosmoscleaner.com#readme "Visit the README.md file in the GitHub repo for Cosmos Cleaner's Website at github.com/derek-perry/cosmoscleaner.com#readme") for more details)
 
